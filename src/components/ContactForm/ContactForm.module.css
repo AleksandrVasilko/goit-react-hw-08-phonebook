@@ -1,0 +1,36 @@
+.title {
+  font-size: 75px;
+  font-weight: 700;
+  margin: 15px 0;
+}
+
+.contactField {
+  display: flex;
+}
+
+.inputTitle {
+  font-size: 30px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.formFild {
+  border: 2px solid black;
+  width: 400px;
+  padding: 30px;
+  margin-bottom: 50px;
+}
+
+.formButton {
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.inputField {
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 25px;
+  margin: 20px 0;
+}

@@ -59,7 +59,7 @@ export default function SignInPage() {
                 </div>
                 <div className={s.inputBox}>
                     <label className={s.label}>
-                        Email<span className={s.required}>*</span>
+                        Password<span className={s.required}>*</span>
                     </label>
                     <input
                         className={s.input}

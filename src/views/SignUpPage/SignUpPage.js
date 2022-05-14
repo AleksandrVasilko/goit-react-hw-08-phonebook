@@ -1,7 +1,7 @@
 import s from './SignUpPage.module.css';
 import { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import { signIn } from '../../redux/auth/auth-operations';
+import { signUp } from '../../redux/auth/auth-operations';
 import { getIsLoggedIn } from '../../redux/auth/auth-selectors';
 import { useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
@@ -39,7 +39,7 @@ export default function SignUpPage() {
     };
 
     const formSubmit = e => {
-        e.prevetDefault();
+        e.preventDefault();
         dispatch(signUp({ email, password, name }));
         setEmail('');
         setName('');

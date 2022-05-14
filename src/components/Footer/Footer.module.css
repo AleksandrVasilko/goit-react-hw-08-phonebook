@@ -1,0 +1,16 @@
+.footerBox{
+    margin-top: 40px;
+    min-width: 75%;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    padding: 20px 30px;
+    justify-items: flex-end;
+    border-radius: 20px;
+    background-color: #faf5f5;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 1), -23px 0 20px -23px rgba(0, 0, 0, 0.8), 23px 0 20px -23px rgba(0, 0, 0, 0.8), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.footerText{
+    font-weight: 700;
+    font-size: 15px;
+}

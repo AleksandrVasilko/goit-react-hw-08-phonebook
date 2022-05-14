@@ -35,7 +35,7 @@ const App = () => {
       <div >
         <Header  />
         <main >
-          <Suspense fallback={<h1>LoadingSSS...</h1>}>
+          <Suspense fallback={<h1>Loading...</h1>}>
             <Routes>
               <Route path="/" element={<HomePage />} />;
               <Route path="/phonebook" element={<PhonebookPage />} />;

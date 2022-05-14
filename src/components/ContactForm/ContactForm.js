@@ -19,7 +19,7 @@ export default function ContactForm() {
                 setName(value);
                 break;
             case 'number':
-                setPhone(value);
+                setNumber(value);
                 break
             default:
                 return;

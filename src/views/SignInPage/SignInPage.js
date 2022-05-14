@@ -51,7 +51,7 @@ export default function SignInPage() {
                     <input
                         className={s.input}
                         value={email}
-                        onClick={handleChange}
+                        onChange={handleChange}
                         type='email'
                         name='email'
                         required
@@ -64,7 +64,7 @@ export default function SignInPage() {
                     <input
                         className={s.input}
                         value={password}
-                        onClick={handleChange}
+                        onChange={handleChange}
                         type='password'
                         name='password'
                         title='minimum 7'

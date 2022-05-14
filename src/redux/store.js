@@ -12,11 +12,21 @@ import {
 } from 'redux-persist';
 import logger from 'redux-logger';
 import storage from "redux-persist/lib/storage";
-import autSlice from './'
+import authSlice from './auth/auth-reduser'
 
-const store = configureStore({
-    reducer: { phonebook: contactsReducer },
-    middleware: getDefaultMiddleware => getDefaultMiddleware({
+const authPersistConfig = {
+    key: 'auth',
+    storage,
+    whitelist:['token'],
+}
+
+export const store = configureStore({
+    reducer: {
+        auth: persistReducer(authPersistConfig, authSlice),
+        phonebook: contactsReducer
+    },
+    middleware: getDefaultMiddleware =>
+        getDefaultMiddleware({
         serializableCheck: {
             ignoreActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
         },
@@ -27,4 +37,4 @@ const store = configureStore({
 });
 
 
-export default store;
+export const persistor = persistStore(store);

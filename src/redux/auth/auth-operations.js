@@ -12,9 +12,9 @@ const token = {
     },
 };
 
-export const singUp = createAsyncThunk('auth/singUp', async values => {
+export const signUp = createAsyncThunk('auth/signUp', async values => {
     try {
-        const { data } = await axios.post('/user/singup', values);
+        const { data } = await axios.post('/user/signUp', values);
         token.set(data.token);
         return data;
     } catch (error) {
@@ -22,7 +22,7 @@ export const singUp = createAsyncThunk('auth/singUp', async values => {
     }
 });
 
-export const singIn = createAsyncThunk('auth/singIn', async values => {
+export const signIn = createAsyncThunk('auth/signIn', async values => {
     try {
         const { data } = await axios.post('/user/login', values);
         console.log(data);

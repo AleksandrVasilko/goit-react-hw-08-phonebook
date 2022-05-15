@@ -1,0 +1,33 @@
+.wrapper{
+    padding: 2vh 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr auto;
+    align-items: center;
+    justify-items: center;
+    min-width: 96vh;
+    grid-template-areas: 
+        'header'
+        'main'
+        'footer';
+}
+
+.header{
+    grid-area: header;
+}
+
+.main{
+    grid-area: main;
+}
+
+.footer{
+    grid-area: footer;
+}
+
+.phonebookSecion{
+    min-width: 500px;
+    padding: 40px;
+    border-radius: 20px;
+    border-color: #faf5f5;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 1), -23px 0 20px -23px rgba(0, 0, 0, 0.8), 23px 0 20px -23px rgba(0, 0, 0, 0.8), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}

@@ -89,7 +89,7 @@ export default function SignUpPage() {
                         required
                     />
                 </div>
-                <div className='s.buttonBox'>
+                <div className={s.buttonBox}>
                     <button className={s.addButton} type="submit">
                         Create
                     </button>

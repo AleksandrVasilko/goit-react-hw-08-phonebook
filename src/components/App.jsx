@@ -1,6 +1,6 @@
+import s from './App.module.css'
 import Header from "./Header";
 import Footer from "./Footer";
-
 
 import { Suspense, useEffect, lazy } from "react";
 import { Route, Routes } from "react-router-dom";
@@ -32,9 +32,9 @@ const App = () => {
 
   return (
     !isLoading && (
-      <div >
-        <Header  />
-        <main >
+      <div className={s.wrapper}>
+        <Header className={s.header}/>
+        <main className={(s.main, s.phonebookSection)}>
           <Suspense fallback={<h1>Loading...</h1>}>
             <Routes>
               <Route path="/" element={<HomePage />} />;
@@ -44,7 +44,7 @@ const App = () => {
             </Routes>
           </Suspense>
         </main>
-        <Footer/>
+        <Footer className={s.footer}/>
       </div>
     )
   )

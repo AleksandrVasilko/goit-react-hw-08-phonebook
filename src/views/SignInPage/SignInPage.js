@@ -2,7 +2,7 @@ import s from './SignInPage.module.css';
 import { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { signIn } from '../../redux/auth/auth-operations';
-import { getIsLoading } from '../../redux/auth/auth-selectors';
+import { getIsLoggedIn } from '../../redux/auth/auth-selectors';
 import { useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 
@@ -11,7 +11,7 @@ export default function SignInPage() {
     const [password, setPassword] = useState('');
     const dispatch = useDispatch();
     const navigate = useNavigate();
-    const loggedIn = useSelector(getIsLoading);
+    const loggedIn = useSelector(getIsLoggedIn);
 
     useEffect(() => {
         if (loggedIn) {

@@ -7,7 +7,7 @@ export default function Navigation() {
     const loggedIn = useSelector(getIsLoggedIn);
     const activeLink = ({ isActive }) => (isActive ? `${s.link} ${s.activeLink}` : s.link);
     return (
-        <div className='s.navigationBox'>
+        <div className={s.navigationBox}>
             <NavLink className={activeLink} to="/">
                 Homepage
             </NavLink>

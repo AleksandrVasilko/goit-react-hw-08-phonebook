@@ -16,16 +16,28 @@ export const getVisibleContacts = state => {
 };
 
 export const fetchContacts = createAsyncThunk('phonebook/fetchContacts', async () => {
-    const { data } = await axios.get('/contacts');
-    return data;
+    try {
+        const { data } = await axios.get('/contacts');
+        return data;
+    } catch (error) { 
+        console.log(error);
+    }
 });
 
 export const deleteContacts = createAsyncThunk('phonebook/deleteContacts', async id => {
-    await axios.delete(`/contacts/${id}`);
-    return id;
+    try {
+        await axios.delete(`/contacts/${id}`);
+        return id;
+    } catch (error) { 
+        console.log(error);
+    }    
 });
 
 export const addContacts = createAsyncThunk('phonebook/addContacts', async contact => {
-    const { data } = await axios.post('/contacts/', contact);
-    return data;
+    try {
+        const { data } = await axios.post('/contacts/', contact);
+        return data;
+    } catch (error) { 
+        console.log(error);
+    }    
 });
